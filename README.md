@@ -10,7 +10,6 @@ numerical_methods/
 │
 ├── main.py                # Main script for running examples
 ├── methods/               # Implementations of algorithms
-├── tests/                 # Unit tests
 ├── utils/                 # Helper functions
 └── examples/              # Test cases and example matrices
 ```

@@ -1,1 +1,1 @@
-print("Hello, World!")
+from .generate_system import generate_system
