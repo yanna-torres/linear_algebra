@@ -16,6 +16,12 @@ numerical_methods/
 
 ## Methods
 
+### Linear Equations
+
+- [Gaussian Elimination](methods/gaussian_elimination.py)
+- [Gauss-Jordan](methods/gauss_jordan.py)
+- [LU Decomposition](methods/lu_decomposition.py)
+- [RREF](methods/rref.py)
 
 ## How to Run
 
