@@ -1,8 +1,10 @@
 import sys
 from pathlib import Path
 
+
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from utils.matrix_operations import print_matrix
 from methods.gauss_jordan import (
     gauss_jordan_partial,
     gauss_jordan_total,
@@ -21,9 +23,12 @@ def test_small_system():
     b = [8.0, -11.0, -3.0]
 
     print("=== Sistema pequeno 3x3 ===")
+    print_matrix(A)
+    print("Vetor b:")
+    print(b)
 
     x_partial = gauss_jordan_partial(A, b)
-    print("Solução (Gauss-Jordan + Pivotação Parcial):", x_partial)
+    print("\nSolução (Gauss-Jordan + Pivotação Parcial):", x_partial)
 
     x_total = gauss_jordan_total(A, b)
     print("Solução (Gauss-Jordan + Pivotação Total):  ", x_total)
@@ -49,9 +54,12 @@ def test_10x10_system():
     b = [1.0] * 10
 
     print("\n=== Sistema 10x10 ===")
+    print_matrix(A)
+    print("Vetor b:")
+    print(b)
 
     x_partial = gauss_jordan_partial(A, b)
-    print("Solução (Gauss-Jordan + Pivotação Parcial):")
+    print("\nSolução (Gauss-Jordan + Pivotação Parcial):")
     print(x_partial)
 
     x_total = gauss_jordan_total(A, b)
