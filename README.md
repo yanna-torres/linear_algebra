@@ -6,12 +6,12 @@ This repository contains Python implementations of several numerical methods for
 ## Project Structure
 
 ```bash
-numerical_methods/
+linear_algebra/
 │
-├── main.py                # Main script for running examples
-├── methods/               # Implementations of algorithms
+├── main.py                # Main script for running tests
+├── methods/               # Implementations of the algorithms
 ├── utils/                 # Helper functions
-└── examples/              # Test cases and example matrices
+└── examples/              # Test cases and example matrices for each method
 ```
 
 ## Methods
@@ -22,6 +22,7 @@ numerical_methods/
 - [Gauss-Jordan](methods/gauss_jordan.py)
 - [LU Decomposition](methods/lu_decomposition.py)
 - [RREF](methods/rref.py)
+- [Cholesky Decomposition](methods/cholesky_decomposition.py)
 
 ## How to Run
 
