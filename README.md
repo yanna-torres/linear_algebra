@@ -44,3 +44,7 @@ python main.py
 For specific study cases, you can check the folder [`examples`](examples) and run test cases for each method.
 
 The folder follows the same structure of the methods folder, where each file is related to a method.
+
+```bash
+python examples/svd_examples.py
+```
