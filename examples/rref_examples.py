@@ -17,6 +17,8 @@ def test_m_greater_n():
         [7, 8, 9],
         [1, 0, 1]
     ]
+    print("Matriz Original:")
+    print_matrix(A)
     print("=== Matriz m > n ===")
     rref_matrix, rank, nullity = analyze_matrix(A)
     print("RREF:")
@@ -32,6 +34,8 @@ def test_m_less_n():
         [1, 2, 3, 4, 5],
         [2, 4, 6, 8, 10]
     ]
+    print("Matriz Original:")
+    print_matrix(A)
     print("=== Matriz m < n ===")
     rref_matrix, rank, nullity = analyze_matrix(A)
     print("RREF:")
@@ -48,6 +52,8 @@ def test_m_equals_n():
         [-3, -1, 2],
         [-2, 1, 2]
     ]
+    print("Matriz Original:")
+    print_matrix(A)
     print("=== Matriz m = n ===")
     rref_matrix, rank, nullity = analyze_matrix(A)
     print("RREF:")
