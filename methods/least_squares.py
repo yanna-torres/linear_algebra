@@ -1,5 +1,10 @@
-from ..utils import transpose, mat_vec_mult, dot
-from .gram_schmidt import gram_schmidt
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils import transpose, mat_vec_mult, dot
+from methods.gram_schmidt import gram_schmidt
 
 
 def least_squares(A, b):

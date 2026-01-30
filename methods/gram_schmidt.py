@@ -1,4 +1,9 @@
-from ..utils import dot, norm, scalar_mult, vector_sub
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils import dot, norm, scalar_mult, vector_sub
 
 
 def extend_to_basis(vectors, m):

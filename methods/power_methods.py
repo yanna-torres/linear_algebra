@@ -1,5 +1,10 @@
-from ..utils import mat_vec_mult, norm, scalar_mult, vector_sub
-from .lu_decomposition import solve_lu
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils import mat_vec_mult, norm, scalar_mult, vector_sub
+from methods.lu_decomposition import solve_lu
 
 
 def power_method(A, x0, eps=1e-8, max_iter=1000):
@@ -61,14 +66,9 @@ def shifted_power_method(A, x0, mu, eps=1e-8, max_iter=1000):
     n = len(A)
 
     # Construção de A - mu I
-    A_shifted = [
-        [A[i][j] - (mu if i == j else 0) for j in range(n)]
-        for i in range(n)
-    ]
+    A_shifted = [[A[i][j] - (mu if i == j else 0) for j in range(n)] for i in range(n)]
 
-    eigenvalue_shifted, eigenvector = inverse_power_method(
-        A_shifted, x0, eps, max_iter
-    )
+    eigenvalue_shifted, eigenvector = inverse_power_method(A_shifted, x0, eps, max_iter)
 
     eigenvalue = eigenvalue_shifted + mu
     return eigenvalue, eigenvector

@@ -1,4 +1,9 @@
-from ..utils import norm, mat_mult, identity, scalar_mult, vector_sub, print_matrix
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils import norm, mat_mult, identity, scalar_mult, vector_sub, print_matrix
 
 
 def householder_matrix(x):
@@ -66,5 +71,13 @@ def householder_similarity(A):
 
         print("Matriz de Householder acumulada:")
         print_matrix(Q)
+
+    print("\n=== Resultado Final ===")
+    
+    print("\nMatriz final triangular:")
+    print_matrix(A_k)
+
+    print("\nMatriz acumulada Q:")
+    print_matrix(Q)
 
     return A_k, Q

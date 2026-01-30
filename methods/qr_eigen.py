@@ -1,6 +1,11 @@
-from ..utils import mat_mult, identity
-from .qr_decomposition import qr_decomposition
-from .householder import householder_similarity
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils import mat_mult, identity
+from methods.qr_decomposition import qr_decomposition
+from methods.householder import householder_similarity
 
 
 def qr_eigenvalues_symmetric(A, tol=1e-8, max_iter=1000):

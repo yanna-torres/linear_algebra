@@ -1,6 +1,11 @@
-from ..utils import mat_mult, transpose, print_matrix
-from .qr_eigen import qr_eigenvalues_symmetric as qr_eigen
-from .gram_schmidt import gram_schmidt
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils import mat_mult, transpose, print_matrix
+from methods.qr_eigen import qr_eigenvalues_symmetric as qr_eigen
+from methods.gram_schmidt import gram_schmidt, extend_to_basis
 import math
 
 
@@ -51,7 +56,8 @@ def svd(A, tol=1e-8):
 
     # 7. Completa base de U se necessário
     if len(U) < m:
-        U = gram_schmidt(U, m)
+        U = extend_to_basis(U, m)
+        U = gram_schmidt(U)
 
     # Transforma U em matriz m x m
     U = transpose(U)

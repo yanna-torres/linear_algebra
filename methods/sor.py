@@ -1,4 +1,9 @@
-from ..utils import norm, vector_sub, print_vector
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from utils import norm, vector_sub, print_vector
 
 
 def sor(A, b, x0, omega, tol=1e-8, max_iter=1000):
