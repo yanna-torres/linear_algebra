@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from methods.power_methods import power_method, inverse_power_method, shifted_power_method
+from methods import power_method, inverse_power_method, shifted_power_method
 from utils import norm, print_matrix
 
 def test_power_methods():

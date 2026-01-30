@@ -3,8 +3,6 @@ from .gauss_jordan import *
 from .lu_decomposition import *
 from .rref import *
 from .cholesky_decomposition import *
-from .conjugate_gradient import *
-from .sor import *
 from .gram_schmidt import *
 from .householder import *
 from .least_squares import *
